@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
+import { Spline_Sans } from 'next/font/google'
 
 import './globals.css'
+
+const splineSans = Spline_Sans({
+  subsets: ['latin'],
+  variable: '--font-spline-sans',
+})
 
 export const metadata: Metadata = {
   title: 'LivrosSaaS',
@@ -14,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${splineSans.variable} antialiased`}>{children}</body>
     </html>
   )
 }
