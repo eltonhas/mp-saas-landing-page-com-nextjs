@@ -23,17 +23,17 @@ export function DropdownMenuCuston() {
         <DropdownMenuLabel>Menu</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center justify-center">
             <Link href={'/#'} className="text-sm">
               Faturamento
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center justify-center">
             <Link href={'/#'} className="text-sm">
               Preço
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center justify-center">
             <Button variant={'outline'}>Login</Button>
           </DropdownMenuItem>
         </DropdownMenuGroup>

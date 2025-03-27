@@ -6,6 +6,7 @@ import Hero from '@/assets/hero.png'
 import { Check } from 'lucide-react'
 import PlanCard from '@/components/plan-card'
 import Footer from '@/components/footer'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -22,7 +23,12 @@ export default function Home() {
       <section className="flex flex-col gap-4 pb-16">
         <div className="flex items-center justify-center gap-2 w-full">
           <Input placeholder="Coloque seu email" className="max-w-[50%] " />
-          <Button className="font-normal">Assine Agora</Button>
+          <Link
+            href={'/sign-in'}
+            className="bg-black text-white px-4 py-2 rounded-lg"
+          >
+            Assine Agora
+          </Link>
         </div>
         <p className="text-xs text-center text-slate-400 md:text-base">
           Comece sua assinatura agora mesmo. Cancele quando quiser.{' '}

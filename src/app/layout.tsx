@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Spline_Sans } from 'next/font/google'
 
 import './globals.css'
-import { Header } from '@/components/header'
+import { Toaster } from '@/components/ui/sonner'
+import { SessionProvider } from 'next-auth/react'
 
 const splineSans = Spline_Sans({
   subsets: ['latin'],
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${splineSans.variable} antialiased`}>
-        <Header />
-        {children}
+        <SessionProvider>
+          {children}
+          <Toaster position="top-right" richColors />
+        </SessionProvider>
       </body>
     </html>
   )
